@@ -1,10 +1,12 @@
 package pages;
 
+import engine.Main;
+
 public interface Page {
 
-    void draw();
+    void draw(Main main);
 
-    void onMouseEvent();
+    void onMouseEvent(Main main);
 
-    void onKeyPress();
+    void onKeyPress(Main main);
 }
