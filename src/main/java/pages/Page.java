@@ -1,6 +1,7 @@
 package pages;
 
 import engine.Main;
+import processing.event.MouseEvent;
 
 /**
  * This interface specifies the methods that all Pages must have.
@@ -27,4 +28,11 @@ public interface Page {
      * @param main the {@link processing.core.PApplet} for the application
      */
     void onKeyPress(Main main);
+
+    /**
+     * This method is called by {@link Main} very time the mouse is scrolled on this page
+     * @param event the {@link processing.event.MouseEvent} for this event
+     * @param main the {@link processing.core.PApplet} for the application
+     */
+    void onMouseWheel(MouseEvent event, Main main);
 }
