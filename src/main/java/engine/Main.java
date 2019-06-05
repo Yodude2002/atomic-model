@@ -2,6 +2,7 @@ package engine;
 
 import pages.*;
 import processing.core.PApplet;
+import processing.event.MouseEvent;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -73,5 +74,10 @@ public class Main extends PApplet {
     @Override
     public void keyPressed() {
         pages[activePage].onKeyPress(this);
+    }
+
+    @Override
+    public void mouseWheel(MouseEvent event) {
+         pages[activePage].onMouseWheel(event, this);
     }
 }
