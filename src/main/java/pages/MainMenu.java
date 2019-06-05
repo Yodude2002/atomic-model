@@ -2,14 +2,19 @@ package pages;
 
 import engine.Main;
 import engine.engineElements.TimelineNode;
+import processing.core.PApplet;
 
 public class MainMenu implements Page {
 
-    private TimelineNode[] timelineNodes = new TimelineNode[1];
+    PApplet p;
+    private TimelineNode[] timelineNodes;
 
     public MainMenu(){
-        timelineNodes[0] = new TimelineNode("Test",10,10,200,300,Main.getTheMain());
+        p = Main.getTheMain();
+        timelineNodes = new TimelineNode[1];
+        timelineNodes[0] = new TimelineNode("Test",10,10,200,300,p);
     }
+
     @Override
     public void draw(Main main) {
         for (TimelineNode node:
