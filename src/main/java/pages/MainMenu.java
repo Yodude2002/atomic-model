@@ -36,6 +36,9 @@ public class MainMenu implements Page {
 
     @Override
     public void onMouseWheel(MouseEvent event, Main main) {
-
+        for (TimelineNode node:
+             timelineNodes) {
+            node.scroll(event.getCount());
+        }
     }
 }
