@@ -13,7 +13,15 @@ public class Main extends PApplet {
     }
 
     private static final Class<?>[] pageClasses = {
-            MainMenu.class
+            MainMenu.class,
+            IntroPage.class,
+            ConclusionPage.class,
+            ThompsonPage.class,
+            MillikanPage.class,
+            RutherfordPage.class,
+            BohrPage.class,
+            ChadwickPage.class,
+            ShrodingerPage.class
     };
 
     private final Page[] pages;
