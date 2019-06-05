@@ -3,6 +3,7 @@ package pages;
 import engine.Main;
 import engine.engineElements.TimelineNode;
 import processing.core.PApplet;
+import processing.event.MouseEvent;
 
 public class MainMenu implements Page {
 
@@ -30,6 +31,11 @@ public class MainMenu implements Page {
 
     @Override
     public void onKeyPress(Main main) {
+
+    }
+
+    @Override
+    public void onMouseWheel(MouseEvent event, Main main) {
 
     }
 }

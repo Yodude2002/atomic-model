@@ -1,6 +1,7 @@
 package pages;
 
 import engine.Main;
+import processing.event.MouseEvent;
 
 public class BohrPage implements Page {
     @Override
@@ -15,6 +16,11 @@ public class BohrPage implements Page {
 
     @Override
     public void onKeyPress(Main main) {
+
+    }
+
+    @Override
+    public void onMouseWheel(MouseEvent event, Main main) {
 
     }
 }
