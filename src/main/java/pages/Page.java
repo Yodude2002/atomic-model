@@ -16,7 +16,7 @@ public abstract class Page {
     protected UIManager uiManager;
     public Page(int backgroundColor)
     {
-        scrollLimit = 300;
+        scrollLimit = 400;
         uiManager = new UIManager(this);
         uiManager.addElement(new BackgroundColorElement(backgroundColor) {
             @Override

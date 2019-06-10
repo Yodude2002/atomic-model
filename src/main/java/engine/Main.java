@@ -15,12 +15,15 @@ public class Main extends PApplet {
             MillikanPage.class,
             RutherfordPage.class,
             BohrPage.class,
-            ChadwickPage.class,
-            ShrodingerPage.class
+            HeisenbergPage.class,
+            ShrodingerPage.class,
+            ChadwickPage.class
     };
 
     private Page[] pages;
     private int activePage = 0;
+
+    public static final int DEFAULT_TEXT_SIZE = 20;
 
     public void setPage(int page) {
         if(page > -1 && page < pages.length)
