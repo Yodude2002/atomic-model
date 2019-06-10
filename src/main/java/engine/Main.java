@@ -7,12 +7,6 @@ import processing.event.MouseEvent;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main extends PApplet {
-
-    private static Main theMain;
-    public static Main getTheMain() {
-        return theMain;
-    }
-
     private static final Class<?>[] pageClasses = {
             MainMenu.class,
             IntroPage.class,
@@ -25,7 +19,7 @@ public class Main extends PApplet {
             ShrodingerPage.class
     };
 
-    private final Page[] pages;
+    private Page[] pages;
     private int activePage = 0;
 
     public void setPage(int page) {
@@ -37,8 +31,13 @@ public class Main extends PApplet {
         PApplet.main(Main.class);
     }
 
-    public Main() {
-        theMain = this;
+    @Override
+    public void settings() {
+        setSize(1280,720);
+    }
+
+    @Override
+    public void setup() {
         pages = new Page[pageClasses.length];
         try {
             for (int i = 0; i < pageClasses.length; i++) {
@@ -49,16 +48,6 @@ public class Main extends PApplet {
             e.printStackTrace();
             exit();
         }
-    }
-
-    @Override
-    public void settings() {
-        setSize(1280,720);
-    }
-
-    @Override
-    public void setup() {
-
     }
 
     @Override

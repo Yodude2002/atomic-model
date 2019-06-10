@@ -1,5 +1,6 @@
-package engine;
+package engine.engineElements;
 
+import engine.Main;
 import processing.core.PApplet;
 
 public interface UIElement

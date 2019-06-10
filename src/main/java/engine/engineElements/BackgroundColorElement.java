@@ -1,4 +1,7 @@
-package engine;
+package engine.engineElements;
+
+import engine.Main;
+import engine.engineElements.UIElement;
 
 public class BackgroundColorElement implements UIElement
 {

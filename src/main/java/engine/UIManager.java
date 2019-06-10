@@ -1,6 +1,7 @@
 package engine;
 
-import processing.core.PApplet;
+import engine.Main;
+import engine.engineElements.UIElement;
 
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class UIManager
     {
         elementList = new ArrayList<>();
     }
-    public void addElement(UIElement element) //im annoyed, why cant we just make elementList public?
+    public void addElement(UIElement element)
     {
         elementList.add(element);
     }

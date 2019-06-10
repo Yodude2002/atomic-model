@@ -1,6 +1,6 @@
 package pages;
 
-import engine.BackgroundColorElement;
+import engine.engineElements.BackgroundColorElement;
 import engine.Main;
 import engine.UIManager;
 import processing.event.MouseEvent;
@@ -46,12 +46,18 @@ public abstract class Page {
      * This method is called by {@link Main} every time a key is pressed and this Page is open
      * @param main the {@link processing.core.PApplet} for the application
      */
-    public abstract void onKeyPress(Main main);
+    public void onKeyPress(Main main)
+    {
+
+    }
 
     /**
      * This method is called by {@link Main} very time the mouse is scrolled on this page
      * @param event the {@link processing.event.MouseEvent} for this event
      * @param main the {@link processing.core.PApplet} for the application
      */
-    public abstract void onMouseWheel(MouseEvent event, Main main);
+    public void onMouseWheel(MouseEvent event, Main main)
+    {
+
+    }
 }

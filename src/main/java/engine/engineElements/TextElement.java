@@ -1,6 +1,7 @@
-package engine;
+package engine.engineElements;
 
-import processing.core.PApplet;
+import engine.Main;
+import engine.engineElements.UIElement;
 import processing.core.PConstants;
 
 public class TextElement implements UIElement

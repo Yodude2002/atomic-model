@@ -4,7 +4,7 @@ import engine.Main;
 import processing.core.PApplet;
 import processing.core.PConstants;
 
-public class TimelineNode {
+public class TimelineNode implements UIElement {
 
     private int page;
     private String name;
@@ -13,9 +13,8 @@ public class TimelineNode {
     private int y, yi, mdy;
     private int width;
     private int height;
-    private PApplet p;
 
-    public TimelineNode(String name, int x, int y, int width, int height, PApplet p, int mdy, int page){
+    public TimelineNode(String name, int x, int y, int width, int height, int mdy, int page){
         this.name = name;
         this.x = x;
         this.y = y;
@@ -23,7 +22,6 @@ public class TimelineNode {
         this.mdy = mdy;
         this.width = width;
         this.height = height;
-        this.p = p;
         this.page = page;
     }
 
@@ -39,7 +37,7 @@ public class TimelineNode {
         }
     }
 
-    public void draw(){
+    public void draw(Main p){
         float r = Math.min(width,height)/4;
         p.fill(0xffffffff);
         p.rect(x,y,width,height,r);
@@ -49,15 +47,31 @@ public class TimelineNode {
         p.text(name,x+r,y + 25);
     }
 
-    public boolean wasClicked(float x, float y) {
-        if(x > this.x && x < this.x+width) {
-            return y > this.y && y < this.y + height;
-        }
-        return false;
+    public void click(Main p) {
+        p.setPage(page);
     }
 
-    public void onClick() {
-        ((Main) p).setPage(page);
+    @Override
+    public int getX()
+    {
+        return x;
     }
 
+    @Override
+    public int getY()
+    {
+        return y;
+    }
+
+    @Override
+    public int getWidth()
+    {
+        return width;
+    }
+
+    @Override
+    public int getHeight()
+    {
+        return height;
+    }
 }
