@@ -49,7 +49,7 @@ public class ImageElement implements UIElement
     {
         if(image == null)
         {
-            image = app.loadImage(caller.getClass().getResource(filename).getPath());
+            image = app.loadImage("./production/atomic-model/pages/" + filename);
             if(width < 0 || height < 0)
             {
                 width = (int)(image.width * scale);

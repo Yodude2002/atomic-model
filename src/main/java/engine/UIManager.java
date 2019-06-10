@@ -21,7 +21,7 @@ public class UIManager
         scrollPosition = 0;
         scrollAmount = 12;
         minScroll = 0;
-        maxScroll = page.getScrollLimit(); //this feels weird to put in. may change later
+        maxScroll = 300;
         elementList = new ArrayList<>();
     }
     public void addElement(UIElement element)
