@@ -26,12 +26,22 @@ public class MainMenu extends Page {
         uiManager.addElement(new LineElementScrollable(610,650,30,0,SCROLL_LIMIT));
         uiManager.addElement(new LineElementScrollable(640,750,30,0,SCROLL_LIMIT));
         uiManager.addElement(new LineElementScrollable(610,850,30,0,SCROLL_LIMIT));
-        uiManager.addElement(new TextElementScrollable("1897",0xffffffff,540,340,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("1897",0xffffffff,570,340,SCROLL_LIMIT));
         uiManager.addElement(new TextElementScrollable("1909",0xffffffff,650,440,SCROLL_LIMIT));
-        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,540,540,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,570,540,SCROLL_LIMIT));
         uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,650,640,SCROLL_LIMIT));
-        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,540,740,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,570,740,SCROLL_LIMIT));
         uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,650,840,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("The Atomic Model",0xffffffff,240,50,SCROLL_LIMIT) {
+            @Override
+            public void draw(Main app) {
+                float fsi = app.g.textSize;
+                app.textSize(96);
+                super.draw(app);
+                app.textSize(fsi);
+            }
+        });
+        uiManager.addElement(new TextElementScrollable("A Brief History",0xffffffff,560,170,SCROLL_LIMIT));
     }
 
     @Override
