@@ -1,38 +1,45 @@
 package pages;
 
 import engine.Main;
-import engine.engineElements.TimelineNode;
+import engine.engineElements.*;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
 public class MainMenu extends Page {
 
-    public static final int SCROLL_LIMIT = 300;
-
-    private TimelineNode[] timelineNodes;
+    private static final int SCROLL_LIMIT = 300;
 
     public MainMenu(){
         super(0xff000000);
-        timelineNodes = new TimelineNode[8];
-        timelineNodes[0] = new TimelineNode("Intro",10,10,200,30, SCROLL_LIMIT,1);
-        timelineNodes[1] = new TimelineNode("Thompson",10,50,200,30,SCROLL_LIMIT,3);
-        timelineNodes[2] = new TimelineNode("Millikan",10,90,200,30, SCROLL_LIMIT,4);
-        timelineNodes[3] = new TimelineNode("Rutherford",10,130,200,30,SCROLL_LIMIT,5);
-        timelineNodes[4] = new TimelineNode("Bohr",10,170,200,30, SCROLL_LIMIT,6);
-        timelineNodes[5] = new TimelineNode("Chadwick",10,210,200,30,SCROLL_LIMIT,7);
-        timelineNodes[6] = new TimelineNode("Shrödinger",10,250,200,30, SCROLL_LIMIT,8);
-        timelineNodes[7] = new TimelineNode("Conclusion",10,290,200,30,SCROLL_LIMIT,2);
-        for(TimelineNode node : timelineNodes)
-        {
-            uiManager.addElement(node);
-        }
+        uiManager.addElement(new TimelineNode("Intro",540,270,200,30, SCROLL_LIMIT,1));
+        uiManager.addElement(new TimelineNode("Thompson",670,335,200,30,SCROLL_LIMIT,3));
+        uiManager.addElement(new TimelineNode("Millikan",410,435,200,30, SCROLL_LIMIT,4));
+        uiManager.addElement(new TimelineNode("Rutherford",670,535,200,30,SCROLL_LIMIT,5));
+        uiManager.addElement(new TimelineNode("Bohr",410,635,200,30, SCROLL_LIMIT,6));
+        uiManager.addElement(new TimelineNode("Chadwick",670,735,200,30,SCROLL_LIMIT,7));
+        uiManager.addElement(new TimelineNode("Shrödinger",410,835,200,30, SCROLL_LIMIT,8));
+        uiManager.addElement(new TimelineNode("Conclusion",540,950,200,30,SCROLL_LIMIT,2));
+        uiManager.addElement(new LineElementScrollable(640,300,0,650,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(640,350,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(610,450,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(640,550,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(610,650,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(640,750,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new LineElementScrollable(610,850,30,0,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("1897",0xffffffff,540,340,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("1909",0xffffffff,650,440,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,540,540,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,650,640,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,540,740,SCROLL_LIMIT));
+        uiManager.addElement(new TextElementScrollable("YEAR",0xffffffff,650,840,SCROLL_LIMIT));
     }
 
     @Override
     public void onMouseWheel(MouseEvent event, Main main) {
         if(event.getCount() == 0) return;
-        for (TimelineNode node : timelineNodes) {
-            node.scroll(PApplet.platform == PApplet.MACOSX?-event.getCount():event.getCount());
+        for (UIElement node : uiManager.getElementList()) {
+            if(node instanceof UIElementScrollable)
+                ((UIElementScrollable) node).scroll(PApplet.platform == PApplet.MACOSX?-event.getCount():event.getCount());
         }
     }
 }

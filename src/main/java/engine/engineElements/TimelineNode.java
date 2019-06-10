@@ -4,7 +4,7 @@ import engine.Main;
 import processing.core.PApplet;
 import processing.core.PConstants;
 
-public class TimelineNode implements UIElement {
+public class TimelineNode implements UIElementScrollable {
 
     private int page;
     private String name;
@@ -29,6 +29,7 @@ public class TimelineNode implements UIElement {
         description = str;
     }
 
+    @Override
     public void scroll(int yChange){
         if(yChange > 0) {
             y = Math.min(yi, y + yChange);
@@ -37,6 +38,7 @@ public class TimelineNode implements UIElement {
         }
     }
 
+    @Override
     public void draw(Main p){
         float r = Math.min(width,height)/4;
         p.fill(0xffffffff);
@@ -47,6 +49,7 @@ public class TimelineNode implements UIElement {
         p.text(name,x+r,y + 25);
     }
 
+    @Override
     public void click(Main p) {
         p.setPage(page);
     }

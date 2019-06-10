@@ -1,6 +1,5 @@
 package engine;
 
-import engine.Main;
 import engine.engineElements.UIElement;
 
 import java.util.ArrayList;
@@ -15,6 +14,9 @@ public class UIManager
     public void addElement(UIElement element)
     {
         elementList.add(element);
+    }
+    public ArrayList<UIElement> getElementList() {
+        return elementList;
     }
     public void draw(Main app)
     {
