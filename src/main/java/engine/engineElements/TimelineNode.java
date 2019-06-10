@@ -2,6 +2,7 @@ package engine.engineElements;
 
 import engine.Main;
 import processing.core.PApplet;
+import processing.core.PConstants;
 
 public class TimelineNode {
 
@@ -42,8 +43,9 @@ public class TimelineNode {
         float r = Math.min(width,height)/4;
         p.fill(0xffffffff);
         p.rect(x,y,width,height,r);
-        p.fill(0x000000);
+        p.fill(0x00000000);
         p.textSize(20);
+        p.textAlign(PConstants.LEFT, PConstants.BASELINE);
         p.text(name,x+r,y + 25);
     }
 

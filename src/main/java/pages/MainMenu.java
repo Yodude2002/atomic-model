@@ -5,7 +5,7 @@ import engine.engineElements.TimelineNode;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
-public class MainMenu implements Page {
+public class MainMenu extends Page {
 
     public static final int SCROLL_LIMIT = 300;
 
@@ -13,6 +13,7 @@ public class MainMenu implements Page {
     private TimelineNode[] timelineNodes;
 
     public MainMenu(){
+        super(0xff000000);
         p = Main.getTheMain();
         timelineNodes = new TimelineNode[8];
         timelineNodes[0] = new TimelineNode("Intro",10,10,200,30,p, SCROLL_LIMIT,1);
@@ -27,6 +28,7 @@ public class MainMenu implements Page {
 
     @Override
     public void draw(Main main) {
+        super.draw(main);
         p.background(0x000000);
         for (TimelineNode node:
              timelineNodes) {
@@ -36,6 +38,7 @@ public class MainMenu implements Page {
 
     @Override
     public void onMouseEvent(Main main) {
+        super.onMouseEvent(main);
         for (TimelineNode timelineNode : timelineNodes) {
             if(timelineNode.wasClicked(main.mouseX,main.mouseY)) {
                 timelineNode.onClick();

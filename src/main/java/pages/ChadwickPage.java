@@ -1,28 +1,21 @@
 package pages;
 
 import engine.Main;
+import engine.TextElement;
 import processing.event.MouseEvent;
 
-public class ChadwickPage implements Page {
-    @Override
-    public void draw(Main main) {
-        main.background(0xff000000);
-        main.fill(0xffffffff);
-        main.text("Chadwick",10,10);
+public class ChadwickPage extends Page {
+    public ChadwickPage()
+    {
+        super(0xff000000);
+        uiManager.addElement(new TextElement("Chadwick", 0xffffffff, 10, 10));
     }
-
-    @Override
-    public void onMouseEvent(Main main) {
-        main.setPage(0);
-    }
-
-    @Override
-    public void onKeyPress(Main main) {
+    public void onKeyPress(Main main)
+    {
 
     }
-
-    @Override
-    public void onMouseWheel(MouseEvent event, Main main) {
+    public void onMouseWheel(MouseEvent event, Main main)
+    {
 
     }
 }

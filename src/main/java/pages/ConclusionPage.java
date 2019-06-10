@@ -1,28 +1,21 @@
 package pages;
 
 import engine.Main;
+import engine.TextElement;
 import processing.event.MouseEvent;
 
-public class ConclusionPage implements Page {
-    @Override
-    public void draw(Main main) {
-        main.background(0xff000000);
-        main.fill(0xffffffff);
-        main.text("Conclusion",10,10);
+public class ConclusionPage extends Page {
+    public ConclusionPage()
+    {
+        super(0xff000000);
+        uiManager.addElement(new TextElement("Conclusion", 0xffffffff, 10, 10));
     }
-
-    @Override
-    public void onMouseEvent(Main main) {
-        main.setPage(0);
-    }
-
-    @Override
-    public void onKeyPress(Main main) {
+    public void onKeyPress(Main main)
+    {
 
     }
-
-    @Override
-    public void onMouseWheel(MouseEvent event, Main main) {
+    public void onMouseWheel(MouseEvent event, Main main)
+    {
 
     }
 }
