@@ -2,6 +2,7 @@ package engine.engineElements;
 
 import engine.Main;
 import engine.engineElements.UIElement;
+import pages.Page;
 
 public class BackgroundColorElement implements UIElement
 {
@@ -22,6 +23,10 @@ public class BackgroundColorElement implements UIElement
             width = app.width;
             height = app.height;
         }
+    }
+    public void scroll(int amount, Page page)
+    {
+        //dont move it. stays as background
     }
     public void click(Main app) { }
     public int getWidth()

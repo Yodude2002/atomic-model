@@ -1,25 +1,24 @@
 package engine.engineElements;
 
 import engine.Main;
-import processing.core.PApplet;
+import pages.Page;
 import processing.core.PConstants;
 
-public class TimelineNode implements UIElementScrollable {
+public class TimelineNode implements UIElement {
 
     private int page;
     private String name;
     private String description;
     private int x;
-    private int y, yi, mdy;
+    private int y, yi;
     private int width;
     private int height;
 
-    public TimelineNode(String name, int x, int y, int width, int height, int mdy, int page){
+    public TimelineNode(String name, int x, int y, int width, int height, int page){
         this.name = name;
         this.x = x;
         this.y = y;
         this.yi = y;
-        this.mdy = mdy;
         this.width = width;
         this.height = height;
         this.page = page;
@@ -30,11 +29,11 @@ public class TimelineNode implements UIElementScrollable {
     }
 
     @Override
-    public void scroll(int yChange){
+    public void scroll(int yChange, Page page){
         if(yChange > 0) {
             y = Math.min(yi, y + yChange);
         }else {
-            y = Math.max(yi-mdy, y + yChange);
+            y = Math.max(yi-page.getScrollLimit(), y + yChange);
         }
     }
 

@@ -1,14 +1,19 @@
 package engine;
 
 import engine.engineElements.UIElement;
+import pages.Page;
+import processing.core.PApplet;
+import processing.event.MouseEvent;
 
 import java.util.ArrayList;
 
 public class UIManager
 {
     private ArrayList<UIElement> elementList;
-    public UIManager()
+    private Page page;
+    public UIManager(Page page)
     {
+        this.page = page;
         elementList = new ArrayList<>();
     }
     public void addElement(UIElement element)
@@ -37,6 +42,15 @@ public class UIManager
                 elem.click(app);
                 break;
             }
+        }
+    }
+    public void scroll(MouseEvent event, Main main)
+    {
+        if(event.getCount() == 0) return;
+        int amount = PApplet.platform == PApplet.MACOSX?-event.getCount():event.getCount();
+        for(UIElement elem : elementList)
+        {
+            elem.scroll(amount, page);
         }
     }
 }

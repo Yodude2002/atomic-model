@@ -2,6 +2,7 @@ package engine.engineElements;
 
 import engine.Main;
 import engine.engineElements.UIElement;
+import pages.Page;
 import processing.core.PConstants;
 
 public class TextElement implements UIElement
@@ -10,12 +11,16 @@ public class TextElement implements UIElement
     private int textColor;
     private int x;
     private int y;
+    private int originalY;
     private float width;
-    public TextElement(String text, int textColor, int x, int y)
+    private boolean scrollable;
+    public TextElement(String text, int textColor, int x, int y, boolean scrollable)
     {
+        this.scrollable = scrollable;
         this.text = text;
         this.x = x;
         this.y = y;
+        originalY = y;
         this.textColor = textColor;
         width = -1;
     }
@@ -32,6 +37,18 @@ public class TextElement implements UIElement
     public void click(Main app)
     {
         //no
+    }
+    public void scroll(int amount, Page page) {
+        if(!scrollable) return;
+        y += amount;
+        if(y < originalY - page.getScrollLimit())
+        {
+            y = originalY - page.getScrollLimit();
+        }
+        else if(y > originalY)
+        {
+            y = originalY;
+        }
     }
     public int getWidth()
     {
