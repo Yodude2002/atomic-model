@@ -10,7 +10,7 @@ public class TimelineNode implements UIElement {
     private String name;
     private String description;
     private int x;
-    private int y, yi;
+    private int y;
     private int width;
     private int height;
 
@@ -18,7 +18,6 @@ public class TimelineNode implements UIElement {
         this.name = name;
         this.x = x;
         this.y = y;
-        this.yi = y;
         this.width = width;
         this.height = height;
         this.page = page;
@@ -26,15 +25,6 @@ public class TimelineNode implements UIElement {
 
     public void setDescription(String str){
         description = str;
-    }
-
-    @Override
-    public void scroll(int yChange, Page page){
-        if(yChange > 0) {
-            y = Math.min(yi, y + yChange);
-        }else {
-            y = Math.max(yi-page.getScrollLimit(), y + yChange);
-        }
     }
 
     @Override

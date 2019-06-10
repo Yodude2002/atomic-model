@@ -21,13 +21,13 @@ public class MainMenu extends Page {
         uiManager.addElement(new LineElement(610,650,30,0));
         uiManager.addElement(new LineElement(640,750,30,0));
         uiManager.addElement(new LineElement(610,850,30,0));
-        uiManager.addElement(new TextElement("1897",0xffffffff,540,340, true));
-        uiManager.addElement(new TextElement("1909",0xffffffff,650,440, true));
-        uiManager.addElement(new TextElement("YEAR",0xffffffff,540,540, true));
-        uiManager.addElement(new TextElement("YEAR",0xffffffff,650,640, true));
-        uiManager.addElement(new TextElement("YEAR",0xffffffff,540,740, true));
-        uiManager.addElement(new TextElement("YEAR",0xffffffff,650,840, true));
-        uiManager.addElement(new TextElement("The Atomic Model",0xffffffff,240,50,true) {
+        uiManager.addElement(new TextElement("1897",0xffffffff,540,340));
+        uiManager.addElement(new TextElement("1909",0xffffffff,650,440));
+        uiManager.addElement(new TextElement("YEAR",0xffffffff,540,540));
+        uiManager.addElement(new TextElement("YEAR",0xffffffff,650,640));
+        uiManager.addElement(new TextElement("YEAR",0xffffffff,540,740));
+        uiManager.addElement(new TextElement("YEAR",0xffffffff,650,840));
+        uiManager.addElement(new TextElement("The Atomic Model",0xffffffff,240,50) {
             @Override
             public void draw(Main app) {
                 float fsi = app.g.textSize;
@@ -36,6 +36,6 @@ public class MainMenu extends Page {
                 app.textSize(fsi);
             }
         });
-        uiManager.addElement(new TextElement("A Brief History",0xffffffff,560,170,true));
+        uiManager.addElement(new TextElement("A Brief History",0xffffffff,560,170));
     }
 }
