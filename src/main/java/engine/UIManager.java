@@ -21,7 +21,7 @@ public class UIManager
         scrollPosition = 0;
         scrollAmount = 16;
         minScroll = 0;
-        maxScroll = 300;
+        maxScroll = 400;
         elementList = new ArrayList<>();
     }
     public void addElement(UIElement element)
