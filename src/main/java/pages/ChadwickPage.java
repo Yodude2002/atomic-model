@@ -10,7 +10,6 @@ public class ChadwickPage extends Page {
         super(0xff000000);
         uiManager.addElement(new TextElement("James Chadwick", 0xffffffff, 70,40, 10));
         uiManager.addElement(new ImageElement("chadwick.jpeg",1050, 10, 1.2f, this));
-        uiManager.addElement(new TextElement("Discoverer of the Neutron",0xffffffff,12, 0,330));
         uiManager.addElement(new TextElement(""+
                 "The Bohr model was not created to account for the existence of a neutron particle.\n" +
                 "Chadwick fired alpha particles at beryllium, with the beryllium followed by paraffin\n" +
