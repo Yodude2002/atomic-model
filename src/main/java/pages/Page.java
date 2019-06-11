@@ -12,11 +12,9 @@ import processing.event.MouseEvent;
  * Only the default constructor will be called.
  */
 public abstract class Page {
-    protected int scrollLimit;
     protected UIManager uiManager;
     public Page(int backgroundColor)
     {
-        scrollLimit = 400;
         uiManager = new UIManager(this);
         uiManager.addElement(new BackgroundColorElement(backgroundColor) {
             @Override
@@ -60,9 +58,5 @@ public abstract class Page {
     public void onMouseWheel(MouseEvent event, Main main)
     {
         uiManager.scroll(event, main);
-    }
-    public int getScrollLimit()
-    {
-        return scrollLimit;
     }
 }
