@@ -9,7 +9,6 @@ public class ImageElement implements UIElement
     private PImage image;
     private int x;
     private int y;
-    private int originalY;
     private int width;
     private int height;
     private float scale;
@@ -23,7 +22,6 @@ public class ImageElement implements UIElement
         this.y = 0;
         this.width = -1;
         this.height = -1;
-        originalY = y;
         scale = 1;
         this.caller = caller;
     }
@@ -51,7 +49,7 @@ public class ImageElement implements UIElement
     {
         if(image == null)
         {
-            image = app.loadImage(caller.getClass().getResource(filename).getPath());
+            image = app.loadImage("./production/atomic-model/pages/" + filename);
             if(width < 0 || height < 0)
             {
                 width = (int)(image.width * scale);
@@ -61,19 +59,6 @@ public class ImageElement implements UIElement
         if(image != null)
         {
             app.image(image, x, y, width, height);
-        }
-    }
-    public void scroll(int amount, Page page)
-    {
-        if(true) return; //will change later
-        y += amount;
-        if(y < originalY)
-        {
-            y = originalY;
-        }
-        else if(y > originalY + page.getScrollLimit())
-        {
-            y = originalY + page.getScrollLimit();
         }
     }
     @Override

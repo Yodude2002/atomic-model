@@ -24,10 +24,6 @@ public class BackgroundColorElement implements UIElement
             height = app.height;
         }
     }
-    public void scroll(int amount, Page page)
-    {
-        //dont move it. stays as background
-    }
     public void click(Main app) { }
     public int getWidth()
     {
