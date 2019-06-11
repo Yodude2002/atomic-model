@@ -8,7 +8,7 @@ public class ConclusionPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Conclusion", 0xffffffff, 70,40,10));
-        uiManager.addElement(new ImageElement("progress.jpg", 20, 550, this));
+        uiManager.addElement(new ImageElement("progress.jpg", 20, 550));
         uiManager.addElement(new TextElement(""+
                 "Overall, the atomic model has changed to reflect a more detailed representation of the atom.\n" +
                 "It started out with J.J. Thompson’s model determined that an atom was just a glob of electrons.\n" +

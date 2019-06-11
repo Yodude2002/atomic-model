@@ -8,9 +8,9 @@ public class RutherfordPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Ernest Rutherford", 0xffffffff, 70,40, 10));
-        uiManager.addElement(new ImageElement("Ernest_Rutherford_LOC.jpg", 990, 10, 1.2f, this));
-        uiManager.addElement(new ImageElement("Atoms-Rutherford.jpg", 900, 500, 0.5f, this));
-        uiManager.addElement(new ImageElement("Foil.jpg", 50, 450, 0.4f, this));
+        uiManager.addElement(new ImageElement("Ernest_Rutherford_LOC.jpg", 990, 10, 1.2f));
+        uiManager.addElement(new ImageElement("Atoms-Rutherford.jpg", 900, 500, 0.5f));
+        uiManager.addElement(new ImageElement("Foil.jpg", 50, 450, 0.4f));
         uiManager.addElement(new TextElement(""+
                 "When Rutherford joined the game, the previous model of the atom did not know of the nucleus\n" +
                 "and just had the electrons floating in a positively charged soup.\n" +

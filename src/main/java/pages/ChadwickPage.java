@@ -1,6 +1,5 @@
 package pages;
 
-import engine.Main;
 import engine.engineElements.ImageElement;
 import engine.engineElements.TextElement;
 
@@ -9,7 +8,7 @@ public class ChadwickPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("James Chadwick", 0xffffffff, 10, 10));
-        uiManager.addElement(new ImageElement("chadwick.jpeg",0,50,this));
+        uiManager.addElement(new ImageElement("chadwick.jpeg",0,50));
         uiManager.addElement(new TextElement(""+
                 "Chadwick worked at Manchester University with Rutherford in 1921. There, he created a certain\n" +
                 "experiment that resulted in the discovery of the neutron.\n" +
@@ -23,6 +22,6 @@ public class ChadwickPage extends Page {
                 "   His work accelerated the development of nuclear physics for the allied side in World War 2\n" +
                 "and provided a critical leap in understanding for the future of the atomic model.",
                 0xffffffff, 20, 208, 16));
-        uiManager.addElement(new ImageElement("chadwickexperiment.png", 256, 384, this));
+        uiManager.addElement(new ImageElement("chadwickexperiment.png", 256, 384));
     }
 }

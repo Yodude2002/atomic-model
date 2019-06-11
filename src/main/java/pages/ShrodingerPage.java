@@ -8,8 +8,8 @@ public class ShrodingerPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Erwin Shrödinger", 0xffffffff, 70,40, 10));
-        uiManager.addElement(new ImageElement("Shrod.jpg", 1025, 10, 0.5f, this));
-        uiManager.addElement(new ImageElement("WaverPart.jpg", 300, 450, 0.4f, this));
+        uiManager.addElement(new ImageElement("Shrod.jpg", 1025, 400, 0.5f));
+        uiManager.addElement(new ImageElement("WaverPart.jpg", 300, 450, 0.4f));
         uiManager.addElement(new TextElement("" +
                 "Shrödinger was perhaps the most influential scientist when it comes to the modern understanding of the atom.\n" +
                 "He recognized that the atomic model could not be made black and white, and, like Heisenberg, he developed\n" +

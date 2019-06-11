@@ -8,9 +8,9 @@ public class BohrPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Niels Bohr", 0xffffffff, 70,40, 10));
-        uiManager.addElement(new ImageElement("220px-Niels_Bohr.jpg", 990, 10, 1.2f, this));
-        uiManager.addElement(new ImageElement("BohrModel.jpg", 200, 650, this));
-        uiManager.addElement(new ImageElement("BohrTable.jpg", 700, 650, this));
+        uiManager.addElement(new ImageElement("220px-Niels_Bohr.jpg", 990, 10, 1.2f));
+        uiManager.addElement(new ImageElement("BohrModel.jpg", 200, 650));
+        uiManager.addElement(new ImageElement("BohrTable.jpg", 700, 650));
 
         uiManager.addElement(new TextElement(""+
                 "The Rutherford model was the latest model at the time, however Bohr problems with it, primarily\n" +

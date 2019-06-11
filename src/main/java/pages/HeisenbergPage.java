@@ -8,8 +8,8 @@ public class HeisenbergPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Werner Heisenberg", 0xffffffff, 70,40, 10));
-        uiManager.addElement(new ImageElement("Heisenberg.jpg", 995, 10, 1.4f, this));
-        uiManager.addElement(new ImageElement("ProbFields.jpg", 300, 450, this));
+        uiManager.addElement(new ImageElement("Heisenberg.jpg", 995, 400, 1.4f));
+        uiManager.addElement(new ImageElement("ProbFields.jpg", 300, 450));
         uiManager.addElement(new TextElement("" +
                 "The creation of the Bohr model was a fantastic step forward for the model of the atom, Heisenberg was\n" +
                 "a little *uncertain* about the rigidity of the Bohr model. Heisenberg saw the claim by the Bohr model that\n" +

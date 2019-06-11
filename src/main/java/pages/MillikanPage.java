@@ -8,8 +8,8 @@ public class MillikanPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("Robert Millikan", 0xffffffff, 70,40, 10));
-        uiManager.addElement(new ImageElement("Millikan.jpg", 995, 10, 0.55f, this));
-        uiManager.addElement(new ImageElement("OilDrop.jpg", 300, 650, this));
+        uiManager.addElement(new ImageElement("Millikan.jpg", 995, 10, 0.55f));
+        uiManager.addElement(new ImageElement("OilDrop.jpg", 300, 650));
         uiManager.addElement(new TextElement("" +
                 "When Millikan stepped into the ring of atomic theory, he had more of a starting point to work from than\n" +
                 "Thomson had; thanks to J.J. Thomson, Millikan knew about the presence of a tiny, negatively charged particle\n" +

@@ -33,6 +33,14 @@ public class UIManager
     }
     public void draw(Main app)
     {
+        if(scrollPosition < minScroll)
+        {
+            scrollPosition = minScroll;
+        }
+        else if(scrollPosition > maxScroll)
+        {
+            scrollPosition = maxScroll;
+        }
         app.pushMatrix();
         app.translate(0, -scrollPosition);
         for(UIElement uiElement : elementList)
@@ -58,15 +66,7 @@ public class UIManager
     public void scroll(MouseEvent event, Main main)
     {
         if(event.getCount() == 0) return;
-        int amount = PApplet.platform == PApplet.MACOSX?-event.getCount():event.getCount();
-        scrollPosition += (amount > 0) ? scrollAmount : -scrollAmount;
-        if(scrollPosition < minScroll)
-        {
-            scrollPosition = minScroll;
-        }
-        else if(scrollPosition > maxScroll)
-        {
-            scrollPosition = maxScroll;
-        }
+        int amount = event.getCount();
+        scrollPosition += scrollAmount * amount/8;
     }
 }

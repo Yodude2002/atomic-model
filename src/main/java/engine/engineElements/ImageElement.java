@@ -1,7 +1,6 @@
 package engine.engineElements;
 
 import engine.Main;
-import pages.Page;
 import processing.core.PImage;
 
 public class ImageElement implements UIElement
@@ -13,8 +12,7 @@ public class ImageElement implements UIElement
     private int height;
     private float scale;
     private String filename;
-    private Object caller;
-    public ImageElement(String filename, Object caller)
+    public ImageElement(String filename)
     {
         image = null;
         this.filename = filename;
@@ -23,23 +21,22 @@ public class ImageElement implements UIElement
         this.width = -1;
         this.height = -1;
         scale = 1;
-        this.caller = caller;
     }
-    public ImageElement(String filename, int x, int y, Object caller)
+    public ImageElement(String filename, int x, int y)
     {
-        this(filename, caller);
+        this(filename);
         this.x = x;
         this.y = y;
     }
-    public ImageElement(String filename, int x, int y, int width, int height, Object caller)
+    public ImageElement(String filename, int x, int y, int width, int height)
     {
-        this(filename, x, y, caller);
+        this(filename, x, y);
         this.width = width;
         this.height = height;
     }
-    public ImageElement(String filename, int x, int y, float scale, Object caller)
+    public ImageElement(String filename, int x, int y, float scale)
     {
-        this(filename, caller);
+        this(filename);
         this.x = x;
         this.y = y;
         this.scale = scale;
