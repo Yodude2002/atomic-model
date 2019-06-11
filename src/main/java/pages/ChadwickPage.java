@@ -10,7 +10,6 @@ public class ChadwickPage extends Page {
         super(0xff000000);
         uiManager.addElement(new TextElement("James Chadwick", 0xffffffff, 10, 10));
         uiManager.addElement(new ImageElement("chadwick.jpeg",0,50,this));
-        uiManager.addElement(new TextElement("Discoverer of the Neutron",0xffffffff,12, 0,330));
         uiManager.addElement(new TextElement(""+
                 "Chadwick worked at Manchester University with Rutherford in 1921. There, he created a certain\n" +
                 "experiment that resulted in the discovery of the neutron.\n" +

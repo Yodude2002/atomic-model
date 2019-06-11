@@ -3,6 +3,10 @@ package pages;
 import engine.Main;
 import engine.engineElements.*;
 
+/**
+ * EVERYTHING should be 1280x720
+ */
+
 public class MainMenu extends Page {
     public MainMenu(){
         super(0xff000000);
