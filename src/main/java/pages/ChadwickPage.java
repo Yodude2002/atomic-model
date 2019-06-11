@@ -20,7 +20,8 @@ public class ChadwickPage extends Page {
                 "at the beryllium in order for the paraffin wax to release protons.\n" +
                 "   This new particle discovered was then called the neutron, and has a mass slightly higher\n" +
                 "than a proton. He added the neutron to Bohr's model of the atom.\n" +
-                "   His work accelerated the development of nuclear physics for the allied side in World War 2.",
+                "   His work accelerated the development of nuclear physics for the allied side in World War 2\n" +
+                "and provided a critical leap in understanding for the future of the atomic model.",
                 0xffffffff, 20, 208, 16));
         uiManager.addElement(new ImageElement("chadwickexperiment.png", 256, 384, this));
     }
