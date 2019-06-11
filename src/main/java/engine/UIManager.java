@@ -19,7 +19,7 @@ public class UIManager
     {
         this.page = page;
         scrollPosition = 0;
-        scrollAmount = 12;
+        scrollAmount = 16;
         minScroll = 0;
         maxScroll = 300;
         elementList = new ArrayList<>();

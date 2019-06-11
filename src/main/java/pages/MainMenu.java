@@ -32,5 +32,6 @@ public class MainMenu extends Page {
         uiManager.addElement(new TextElement("1932",0xffffffff,540,940));
         uiManager.addElement(new TextElement("The Atomic Model",0xffffffff, 96,240,50));
         uiManager.addElement(new TextElement("A Brief History",0xffffffff,560,170));
+        uiManager.addElement(new ImageElement("Atom.jpg",50,200,0.5f,this));
     }
 }
