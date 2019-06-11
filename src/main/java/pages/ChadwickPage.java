@@ -8,7 +8,7 @@ public class ChadwickPage extends Page {
     public ChadwickPage()
     {
         super(0xff000000);
-        uiManager.addElement(new TextElement("James Chadwick", 0xffffffff, 10, 10));
+        uiManager.addElement(new TextElement("James Chadwick", 0xffffffff, 70,40, 10));
         uiManager.addElement(new ImageElement("chadwick.jpeg",0,50,this));
         uiManager.addElement(new TextElement("Discoverer of the Neutron",0xffffffff,0,330){
             @Override
@@ -19,5 +19,8 @@ public class ChadwickPage extends Page {
                 app.textSize(fsi);
             }
         });
+        uiManager.addElement(new TextElement("" +
+                "[text]" +
+                "", 0xffffffff, 20,20,100));
     }
 }
