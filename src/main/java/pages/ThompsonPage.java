@@ -9,6 +9,7 @@ public class ThompsonPage extends Page {
         super(0xff000000);
         uiManager.addElement(new TextElement("J.J. Thompson", 0xffffffff, 70, 40, 10));
         uiManager.addElement(new ImageElement("JJ_Thomson.jpg", 990, 10, 0.4f, this));
+        uiManager.addElement(new ImageElement("ThomsonModel.jpg", 600, 800, this));
         uiManager.addElement(new TextElement("" +
                 "When Thomson began his work on the atomic model, the only previous model he had to work off of\n" +
                 "was the one created by John Dalton, that had been proposed as early as the time of Ancient Greece.\n" +
@@ -30,7 +31,7 @@ public class ThompsonPage extends Page {
                 "   Following his experiments, Thomson concluded that the most detailed model he could create would be the \"plum\n" +
                 "pudding model\". Of course he did not call it this, but his model claimed that the atom was a glob of negative\n" +
                 "electrons floating in a soup of positive charge, like plums in a pudding. This model was a huge leap from the\n" +
-                "previous belief that the atom was indivisible, but was still far from an absolute understanding and left much\n" +
+                "previous belief that the atom was indivisible, but was still far from an absolute understanding, and left much\n" +
                 "room for improvement."+
                 "", 0xffffffff, 20, 20, 100));
     }
