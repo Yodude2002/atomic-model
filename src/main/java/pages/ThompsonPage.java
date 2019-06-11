@@ -8,7 +8,7 @@ public class ThompsonPage extends Page {
     {
         super(0xff000000);
         uiManager.addElement(new TextElement("J.J. Thompson", 0xffffffff, 70, 40, 10));
-        uiManager.addElement(new ImageElement("JJ_Thomson.jpg", 990, 10, 0.4f, this));
+        uiManager.addElement(new ImageElement("JJ_Thomson.jpg", 1022, 10, 0.4f, this));
         uiManager.addElement(new ImageElement("ThomsonModel.jpg", 600, 800, this));
         uiManager.addElement(new TextElement("" +
                 "When Thomson began his work on the atomic model, the only previous model he had to work off of\n" +
